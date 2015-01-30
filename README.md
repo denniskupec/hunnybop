@@ -1,5 +1,5 @@
 # HunnyBop CSGO
-CSGO bunnyhop script.
+CSGO bunnyhop script.  
 There are zero anti-cheat bypass methods in this so have fun getting VAC banned.   
 I am not responsible for what you do with this.
 
