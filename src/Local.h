@@ -19,7 +19,6 @@ public:
 	template <typename T> T* Read(DWORD address);
 	DWORD GetModuleBase(const char* module_name);
 
-	int maxPlayers();
 	bool onGround();
 
 };
