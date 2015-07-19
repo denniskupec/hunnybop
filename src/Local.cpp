@@ -31,7 +31,6 @@ T* Local::Read(DWORD address)
 {
 	T* value;
 	ReadProcessMemory(this->handle, (LPVOID)address, &value, sizeof(T), NULL);
-
 	return value;
 }
 
@@ -54,15 +53,9 @@ DWORD Local::GetModuleBase(const char* module_name)
 	return (DWORD)module_base;
 }
 
-int Local::maxPlayers()
-{
-	return (int)this->Read<DWORD>(this->ModuleBase[1] + Local::m_dwMaxPlayer);
-}
-
 bool Local::onGround()
 {
-	UINT16 flags = (int)this->Read<UINT16>(this->LocalPlayer + Local::m_fFlags);
-
+	UINT16 flags = (UINT16)this->Read<UINT16>(this->LocalPlayer + 0x100);
 	return flags != 256;
 }
 
